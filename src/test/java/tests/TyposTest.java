@@ -10,11 +10,7 @@ public class TyposTest extends BaseTest {
     public void checkTextAfterRefresh() {
         typosPage.openPage();
         typosPage.isPageOpened();
-
-        while (typosPage.getText().equals(typosPage.wrongText)) {
-            System.out.println("Wrong text is displayed");
-            typosPage.refreshPage();
-        }
-        assertEquals(typosPage.getText(),typosPage.correctText);
+        
+        assertEquals(typosPage.getContentText(),typosPage.CORRECT_TEXT);
     }
 }

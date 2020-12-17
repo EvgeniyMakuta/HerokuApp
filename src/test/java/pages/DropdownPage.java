@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class DropdownPage extends BasePage {
-    final String endpoint = "/dropdown";
+    final String ENDPOINT = "/dropdown";
     public static final By DROPDOWN_LIST = By.id("dropdown");
 
     public DropdownPage(WebDriver driver) {
@@ -26,7 +26,7 @@ public class DropdownPage extends BasePage {
 
     @Override
     public void openPage() {
-        driver.get(URL + endpoint);
+        driver.get(URL + ENDPOINT);
     }
 
     public boolean elementIsSelected(int number) {

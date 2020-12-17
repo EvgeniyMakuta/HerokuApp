@@ -9,7 +9,7 @@ public class InputPage extends BasePage {
 
     private String actualResult;
     public static final By INPUT_FIELD = By.cssSelector("input[type='number']");
-    private String endpoint = "/inputs";
+    private String ENDPOINT = "/inputs";
 
     public InputPage(WebDriver driver) {
         super(driver);
@@ -30,7 +30,7 @@ public class InputPage extends BasePage {
 
     @Override
     public void openPage() {
-        driver.get(URL + endpoint);
+        driver.get(URL + ENDPOINT);
     }
 
     public void input(String text) {

@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CheckboxPage extends BasePage {
     public final static By CHECKBOXES = By.cssSelector("*[type=checkbox]");
-    final String endpoint = "/checkboxes";
+    final String ENDPOINT = "/checkboxes";
 
     public CheckboxPage(WebDriver driver) {
         super(driver);
@@ -28,7 +28,7 @@ public class CheckboxPage extends BasePage {
 
     @Override
     public void openPage() {
-        driver.get(URL + endpoint);
+        driver.get(URL + ENDPOINT);
     }
 
     public void checkBox(int number) {

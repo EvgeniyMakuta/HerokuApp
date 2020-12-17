@@ -9,10 +9,8 @@ import org.testng.Assert;
 
 import java.util.List;
 
-import static org.testng.Assert.assertEquals;
-
 public class AddRemoveElementsPage extends BasePage {
-    final String endpoint = "/add_remove_elements/";
+    final String ENDPOINT = "/add_remove_elements/";
     public static final By ADD_ELEMENT_BUTTON = By.xpath("//*[@onclick='addElement()']");
     public static final By DELETE_BUTTON = By.xpath("//*[@onclick='deleteElement()']");
 
@@ -31,7 +29,7 @@ public class AddRemoveElementsPage extends BasePage {
 
     @Override
     public void openPage() {
-        driver.get(URL + endpoint);
+        driver.get(URL + ENDPOINT);
     }
 
     public void addElement() {

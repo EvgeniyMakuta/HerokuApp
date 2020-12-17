@@ -9,9 +9,8 @@ import org.testng.Assert;
 
 public class TyposPage extends BasePage {
     public static final By CONTENT = By.id("content");
-    final String endpoint = "/typos";
-    public final String correctText = "Typos\n" + "This example demonstrates a typo being introduced. It does it randomly on each page load.\n" + "Sometimes you'll see a typo, other times you won't.";
-    public final String wrongText = "Typos\n" + "This example demonstrates a typo being introduced. It does it randomly on each page load.\n" + "Sometimes you'll see a typo, other times you won,t.";
+    final String ENDPOINT = "/typos";
+    public final String CORRECT_TEXT = "Typos\n" + "This example demonstrates a typo being introduced. It does it randomly on each page load.\n" + "Sometimes you'll see a typo, other times you won't.";
 
     public TyposPage(WebDriver driver) {
         super(driver);
@@ -28,14 +27,14 @@ public class TyposPage extends BasePage {
 
     @Override
     public void openPage() {
-        driver.get(URL + endpoint);
+        driver.get(URL + ENDPOINT);
     }
 
     public void refreshPage() {
         driver.navigate().refresh();
     }
 
-    public String getText() {
+    public String getContentText() {
         WebElement content = driver.findElement(By.id("content"));
         return content.getText();
     }

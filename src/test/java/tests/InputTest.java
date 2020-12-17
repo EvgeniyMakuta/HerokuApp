@@ -5,7 +5,7 @@ import static org.openqa.selenium.Keys.ARROW_DOWN;
 import static org.openqa.selenium.Keys.ARROW_UP;
 import static org.testng.Assert.assertEquals;
 
-public class inputTest extends BaseTest {
+public class InputTest extends BaseTest {
     @Test(description = "Entering different data-sets to the input field", dataProvider = "data-provider")
     public void inputDifferentValues(String text, String expectedText) {
         inputPage.openPage();

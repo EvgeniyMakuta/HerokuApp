@@ -22,6 +22,7 @@ public class BaseTest {
     CheckboxPage checkboxPage;
     DropdownPage dropdownPage;
     TyposPage typosPage;
+    TablesPage tablesPage;
     private Logger log;
 
     @BeforeMethod (description = "Setting up before test")
@@ -50,6 +51,7 @@ public class BaseTest {
         checkboxPage = new CheckboxPage(driver);
         dropdownPage = new DropdownPage(driver);
         typosPage = new TyposPage(driver);
+        tablesPage = new TablesPage(driver);
     }
 
     @DataProvider(name = "data-provider")
