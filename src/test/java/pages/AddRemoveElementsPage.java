@@ -32,15 +32,15 @@ public class AddRemoveElementsPage extends BasePage {
         driver.get(URL + ENDPOINT);
     }
 
-    public void addElement() {
+    public void clickOnAddButton() {
         driver.findElement(ADD_ELEMENT_BUTTON).click();
     }
 
-    public void deleteElement() {
+    public void clickOnDeleteButton() {
         driver.findElement(DELETE_BUTTON).click();
     }
 
-    public int getAmountOfElements() {
+    public int getAmountOfAddButtonElements() {
         List<WebElement> actualResult = driver.findElements(By.id("elements"));
         return actualResult.size();
     }

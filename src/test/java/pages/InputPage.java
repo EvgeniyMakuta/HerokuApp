@@ -15,7 +15,7 @@ public class InputPage extends BasePage {
         super(driver);
     }
 
-    public String getActualResult() {
+    public String getActualInputFieldValue() {
         return actualResult = inputField.getAttribute("value");
     }
 

@@ -31,7 +31,7 @@ public class CheckboxPage extends BasePage {
         driver.get(URL + ENDPOINT);
     }
 
-    public void checkBox(int number) {
+    public void clickOnCheckbox(int number) {
         List<WebElement> checkboxes = driver.findElements(By.tagName("input"));
         checkboxes.get(number - 1).click();
     }

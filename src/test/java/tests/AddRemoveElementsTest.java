@@ -9,9 +9,9 @@ public class AddRemoveElementsTest extends BaseTest {
     public void addRemoveElements() {
         addRemoveElementsPage.openPage();
         addRemoveElementsPage.isPageOpened();
-        addRemoveElementsPage.addElement();
-        addRemoveElementsPage.addElement();
-        addRemoveElementsPage.deleteElement();
-        assertEquals(addRemoveElementsPage.getAmountOfElements(), 1, "Incorrect amount of elements is displayed: " + addRemoveElementsPage.getAmountOfElements());
+        addRemoveElementsPage.clickOnAddButton();
+        addRemoveElementsPage.clickOnAddButton();
+        addRemoveElementsPage.clickOnDeleteButton();
+        assertEquals(addRemoveElementsPage.getAmountOfAddButtonElements(), 1, "Incorrect amount of elements is displayed: " + addRemoveElementsPage.getAmountOfAddButtonElements());
     }
 }

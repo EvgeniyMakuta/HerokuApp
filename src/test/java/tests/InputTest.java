@@ -11,21 +11,21 @@ public class InputTest extends BaseTest {
         inputPage.openPage();
         inputPage.isPageOpened();
         inputPage.input(text);
-        assertEquals(inputPage.getActualResult(), expectedText);
+        assertEquals(inputPage.getActualInputFieldValue(), expectedText);
 
         inputPage.input(ARROW_UP);
-        assertEquals(inputPage.getActualResult(), inputPage.getNumberAsString(expectedText, 1));
+        assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 1));
 
         inputPage.input(ARROW_UP);
-        assertEquals(inputPage.getActualResult(), inputPage.getNumberAsString(expectedText, 2));
+        assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 2));
 
         inputPage.input(ARROW_DOWN);
-        assertEquals(inputPage.getActualResult(), inputPage.getNumberAsString(expectedText, 1));
+        assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 1));
 
         inputPage.input(ARROW_DOWN);
-        assertEquals(inputPage.getActualResult(), inputPage.getNumberAsString(expectedText, 0));
+        assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 0));
 
         inputPage.input(ARROW_DOWN);
-        assertEquals(inputPage.getActualResult(), inputPage.getNumberAsString(expectedText, -1));
+        assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, -1));
     }
 }

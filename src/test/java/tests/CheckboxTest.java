@@ -11,10 +11,10 @@ public class CheckboxTest extends BaseTest{
         checkboxPage.openPage();
         checkboxPage.isPageOpened();
         assertFalse(checkboxPage.boxIsSelected(1));
-        checkboxPage.checkBox(1);
+        checkboxPage.clickOnCheckbox(1);
         assertTrue(checkboxPage.boxIsSelected(1));
         assertTrue(checkboxPage.boxIsSelected(2));
-        checkboxPage.checkBox(2);
+        checkboxPage.clickOnCheckbox(2);
         assertFalse(checkboxPage.boxIsSelected(2));
     }
 }
