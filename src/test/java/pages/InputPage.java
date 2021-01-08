@@ -33,12 +33,12 @@ public class InputPage extends BasePage {
         driver.get(URL + ENDPOINT);
     }
 
-    public void input(String text) {
+    public void typeTextToInputField(String text) {
         inputField = driver.findElement(INPUT_FIELD);
         inputField.sendKeys(text);
     }
 
-    public void input(Keys keys) {
+    public void typeKeysToInputField(Keys keys) {
         inputField = driver.findElement(INPUT_FIELD);
         inputField.sendKeys(keys);
     }

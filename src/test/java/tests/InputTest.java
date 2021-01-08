@@ -10,22 +10,22 @@ public class InputTest extends BaseTest {
     public void inputDifferentValues(String text, String expectedText) {
         inputPage.openPage();
         inputPage.isPageOpened();
-        inputPage.input(text);
+        inputPage.typeTextToInputField(text);
         assertEquals(inputPage.getActualInputFieldValue(), expectedText);
 
-        inputPage.input(ARROW_UP);
+        inputPage.typeKeysToInputField(ARROW_UP);
         assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 1));
 
-        inputPage.input(ARROW_UP);
+        inputPage.typeKeysToInputField(ARROW_UP);
         assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 2));
 
-        inputPage.input(ARROW_DOWN);
+        inputPage.typeKeysToInputField(ARROW_DOWN);
         assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 1));
 
-        inputPage.input(ARROW_DOWN);
+        inputPage.typeKeysToInputField(ARROW_DOWN);
         assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, 0));
 
-        inputPage.input(ARROW_DOWN);
+        inputPage.typeKeysToInputField(ARROW_DOWN);
         assertEquals(inputPage.getActualInputFieldValue(), inputPage.getNumberAsString(expectedText, -1));
     }
 }
