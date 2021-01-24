@@ -23,6 +23,11 @@ public class BaseTest {
     DropdownPage dropdownPage;
     TyposPage typosPage;
     TablesPage tablesPage;
+    ContextMenuPage contextMenuPage;
+    DynamicControlsPage dynamicControlsPage;
+    FileUploaderPage fileUploaderPage;
+    FramesPage framesPage;
+    FileDownloadPage fileDownloadPage;
     private Logger log;
 
     @BeforeMethod (description = "Setting up before test")
@@ -52,6 +57,11 @@ public class BaseTest {
         dropdownPage = new DropdownPage(driver);
         typosPage = new TyposPage(driver);
         tablesPage = new TablesPage(driver);
+        contextMenuPage = new ContextMenuPage(driver);
+        dynamicControlsPage = new DynamicControlsPage(driver);
+        fileUploaderPage = new FileUploaderPage(driver);
+        framesPage = new FramesPage(driver);
+        fileDownloadPage = new FileDownloadPage(driver);
     }
 
     @DataProvider(name = "data-provider")

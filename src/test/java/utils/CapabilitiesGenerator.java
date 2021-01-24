@@ -2,6 +2,8 @@ package utils;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.HashMap;
+
 public class CapabilitiesGenerator {
 
     public static ChromeOptions getChromeOptions() {
@@ -17,10 +19,15 @@ public class CapabilitiesGenerator {
             System.setProperty("webdriver.chrome.driver", driverPath + "/linux/chromedriver");
         }
 
+        HashMap<String, Object> prefs = new HashMap<String, Object>();
+        prefs.put("profile.default_content_settings.popups", 0);
+        prefs.put("download.default_directory", System.getProperty("user.dir"));
+        options.setExperimentalOption("prefs", prefs);
+
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--disable-popup-blocking");
         options.addArguments("--disable-notifications");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         options.addArguments("-incognito");
         options.setAcceptInsecureCerts(true);
         options.addArguments("--disable-extensions");
